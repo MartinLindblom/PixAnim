@@ -4,6 +4,24 @@
              xmlns:local="clr-namespace:PixAnim"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <!-- Background Colors -->
+        <Color x:Key="BackgroundDark" A="255" B="25" G="25" R="25"></Color>
+        <Color x:Key="BackgroundMid" A="255" B="50" G="50" R="50"></Color>
+        <Color x:Key="BackgroundLight" A="255" B="75" G="75" R="75"></Color>
+        
+        <!-- Text Colors -->
+        <Color x:Key="TextNormal" A="255" B="200" G="200" R="200"></Color>
+        <Color x:Key="TextWhite" A="255" B="255" G="255" R="255"></Color>
+        <Color x:Key="TextHighlight" A="255" B="255" G="255" R="160"></Color>
+        
+        <!-- Button Colors -->
+        <Color x:Key="ButtonRegular" A="0" B="0" G="0" R="0"></Color>
+        <Color x:Key="ButtonHover" A="255" B="128" G="128" R="128"></Color>
+        <Color x:Key="ButtonClicked" A="255" B="60" G="60" R="60"></Color>
+        <Color x:Key="ButtonDisabled" A="255" B="200" G="200" R="200"></Color>
+        <Color x:Key="ButtonBorder" A="255" B="35" G="35" R="35"></Color>
+
+        <!-- Tool Icons -->
+        <BitmapImage x:Key="ToolPenIcon" UriSource="/Resources/ToolIcons/PenIcon.png"></BitmapImage>
     </Application.Resources>
 </Application>

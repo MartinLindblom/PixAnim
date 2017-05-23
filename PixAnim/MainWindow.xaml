@@ -5,4 +5,91 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PixAnim"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525"/>
+        Title="MainWindow" Height="720" Width="1280">
+    <Window.Foreground>
+        <SolidColorBrush Color="{DynamicResource TextNormal}"/>
+    </Window.Foreground>
+    <Window.Background>
+        <SolidColorBrush Color="{DynamicResource BackgroundMid}"/>
+    </Window.Background>
+
+    <DockPanel>
+
+        <!-- Menu List-->
+        <Menu DockPanel.Dock="Top">
+            <Menu.Foreground>
+                <SolidColorBrush Color="{DynamicResource TextNormal}"/>
+            </Menu.Foreground>
+            <Menu.Background>
+                <SolidColorBrush Color="{DynamicResource BackgroundDark}"/>
+            </Menu.Background>
+
+            <!-- File -->
+            <MenuItem Header="_File">
+                <MenuItem Header="_Open"></MenuItem>
+                <MenuItem Header="_Save"></MenuItem>
+                <MenuItem Header="_Save As"></MenuItem>
+                <MenuItem Header="_Export"></MenuItem>
+                <MenuItem Header="_Exit"></MenuItem>
+            </MenuItem>
+
+            <!-- Edit -->
+            <MenuItem Header="_Edit">
+                <MenuItem Header="_Undo"></MenuItem>
+                <MenuItem Header="_Redo"></MenuItem>
+                <MenuItem Header="_Copy"></MenuItem>
+                <MenuItem Header="_Cut"></MenuItem>
+                <MenuItem Header="_Paste"></MenuItem>
+            </MenuItem>
+        </Menu>
+
+        <!-- Content -->
+        <DockPanel LastChildFill="True">
+
+            <!-- Timeline and Controls -->
+            <StackPanel DockPanel.Dock="Bottom">
+                <StackPanel Height="150">
+                    <StackPanel.Background>
+                        <SolidColorBrush Color="{DynamicResource BackgroundDark}"/>
+                    </StackPanel.Background>
+
+                </StackPanel>
+            </StackPanel>
+
+            <!-- Tools, Canvas, Colors and Preview -->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="35px"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="200px"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <!-- Toolbar -->
+                <Border Grid.Column="0">
+                    <StackPanel>
+                        <StackPanel.Background>
+                            <SolidColorBrush Color="{DynamicResource BackgroundDark}"/>
+                        </StackPanel.Background>
+
+                        <local:StyledButton Width="25" Height="25" Margin="0 5 0 0">
+                            <local:StyledButton.Background>
+                                <ImageBrush ImageSource="{DynamicResource ToolPenIcon}"/>
+                            </local:StyledButton.Background>
+                        </local:StyledButton>
+                    </StackPanel>
+                </Border>
+
+                <!-- Canvas -->
+                <local:GraphicsCanvas Grid.Column="1"/>
+
+                <!-- Color and Preview -->
+                <StackPanel Grid.Column="2">
+                    <StackPanel.Background>
+                        <SolidColorBrush Color="{DynamicResource BackgroundDark}"/>
+                    </StackPanel.Background>
+                </StackPanel>
+
+            </Grid>
+        </DockPanel>
+    </DockPanel>
+</Window> 
